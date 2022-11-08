@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="index.ffb1a8e1.js"></script>
+    <link rel="stylesheet" href="index.d85639a1.css">
+  </head>
+  <body>
+    <button class="edit">Редактировать</button>
+    <button class="save">Сохранить</button>
+    <div id="app">
+      <div class="form">
+        <div class="form-field">
+          <label for="head">Заголовок</label>
+          <input id="head" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="name">Имя</label>
+          <input id="name" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="age">Возраст</label>
+          <input id="age" type="text">
+        </div>
+        
+        <div class="form-field">
+          <label for="date">Дата пропажи</label>
+          <input id="date" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="place">Место пропажи</label>
+          <input id="place" type="text">
+        </div>
+
+        <div class="form-field">
+          <label for="wear">Одежда</label>
+          <textarea id="wear" rows="5"></textarea>
+        </div>
+        
+        <div class="form-field">
+          <label for="omens">Приметы</label>
+          <textarea id="omens" rows="5"></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="footer-name">Имя в футере</label>
+          <input id="footer-name" type="text">
+        </div>
+
+        <div class="form-field">
+          <input type="file" id="file">
+        </div>
+
+        <div class="form-field">
+          <button id="render">Просмотр</button>
+        </div>
+      </div>
+
+      <div id="wrapper">
+        <div class="header">Пропал человек</div>
+
+        <div class="content">
+
+          <div class="image-box">
+            <div class="image-container">
+              <img id="photo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAEsCAYAAACG+vy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVpSURBVHgB7djhkQxbGIDh3lv3PxkgAkSACBABIlAiQASIABGQASIgA2RABHvnm6reO7vWu7u39uLH81RtbU/3dvcU553TZ/b2NxbgWH8twE8JBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQE7p1q1by9evXw/t+/Tp03L37t3l/zD34/cTyCm9f//+h33fv3/fRvKr7sev9/fCufn27dvy4sWL5cuXL8vNmzeXe/fubffPvjm268aNG9u/OerDhw/L27dvlzt37iyPHj3aXuPatWsHx+fa6/XWe8y+169f/3Cthw8fLhcvXtxe89WrV9vt2Xf58uWF0zGDnKPr169vB+4M2pkB1sekS5cubX9m3wzm2Z7BetSEcf/+/eXq1avb1xPRPMKts8mcO9ecAT73eP78+TaWudZ6jydPnhxsjwljrnn79u3tded8s9MZ7HMq80+1GZjH/ozN4N7ffOofOmczcPc3g/rg9Wag7m8G7E/vsZkp9t+9e7fd3swO29/zet0+ev7nz5+39zj6PnfN+/v48ePB65cvXx5cj5N5xDqDzeA69Hgyn8RPnz7dbq9rkaOL680gPvg0P8lc4+hj1zxerddeZ5/VvJeZPebLg5/dY87ZfUSb66/vmZMJ5AyuXLlyaCDO69UM1Pl59uzZoXOOe5T6meMG++7aZY7PFwO75viFCxfymvM36/vY3eZk1iDnZJ7xZw0x1llmPqnPMhhnrTDril2z+J4F+5iZYPf4rD9mX91jju/OGHPOvFdOxwxyTiaKx48fbxfVM2Dn0Wa+MTqLOf/Bgwfbxf48Cs3vudabN28Ojs8MMDPXOmPNY1+Z4+vCfM6dYE46h3/tzUJk4VxNHOsA/i/WCDaL62O/kp3j83OWr2vXRzWPV2cjkD/U3t7e4r/m97MG+UNtvt5d+P3MIBDMIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQC4R9cAt9Epw1XOQAAAABJRU5ErkJggg==">
+            </div>
+            <div class="left-footer">
+              <img class="spasgrad-logo" src="spasgad.45d9f2ae.png" alt="">
+              <img class="center-logo" src="center.f3556edb.png" alt="">
+            </div>
+          </div>
+
+          <div class="red-line"></div>
+
+          <div class="description">
+            <div class="info">
+              <div class="name">Юлий Цезарь</div>
+              <div class="age">12 лет</div>
+
+              <div class="big-red">Дата и место пропажи:</div>
+              <p class="date">date</p>
+              <p class="place">place</p>
+              <br>
+              <div class="big-red">Приметы:</div>
+              <p class="omens">lorem lorem lorem Lorm cumvel, mollitia quae modi at! Ut vel sit consectetur numquam voluptas, doloremque repudiandae quaerat repellendus.</p>
+              <br>
+              <div class="big-red">Одежда:</div>
+              <p class="wear">lorem lorem loremat ipsa vvollabore vollabo revollabore vollaboreollabore ducimus?</p>
+            </div>
+
+            <div class="right-footer">
+              <p class="footer-desc">всех кто может сообщить какую-либо информацию о местонахождении <span class="subname">Имя</span>, просим позвонить по телефонам:</p>
+              <div class="phone">8 (800) 511-01-30, 8-495-999-7-112, 112</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <img id="image" src="">
+    </div>
+
+    
+  </body>
+</html>
